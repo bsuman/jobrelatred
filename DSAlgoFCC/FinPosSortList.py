@@ -9,41 +9,48 @@
 # output = position of the number in the list, if number present in the list otherwise None
 # constraint: the function should find the given in minimum number of steps
 
-def binarysearch(cards, query, left, right):
+def binarysearch(cards, query, left, right, foundposition):
     if right - left <= 0:
-        return None
+        return foundposition
     mid = (right + left) // 2
     if cards[mid] == query:
-        return mid
+        if foundposition == -1 or mid < foundposition:
+            foundposition = mid
+            if cards[mid - 1] < query:
+                return foundposition
 
     if cards[mid] > query:
-        return binarysearch(cards, query, mid + 1, right)
+        return binarysearch(cards, query, mid + 1, right, foundposition)
     else:
-        return binarysearch(cards, query, left, mid)
+        return binarysearch(cards, query, left, mid, foundposition)
 
 
 def locate_card(cards, query):
     left = 0
     right = len(cards)
-    result = binarysearch(cards, query, left, right)
-    if result is None:
+    foundposition = -1
+    result = binarysearch(cards, query, left, right, foundposition)
+    if result == -1:
         print("Number not in the list!")
     else:
-        print("Number found at position: ", result)
+        print("Number " + str(query) + " found at position:", result)
+
 
 if __name__ == '__main__':
-    li = [34,23,20,18,16,13,12,9,7,6,6,5,2,1]
-    locate_card(li,23)
-    locate_card(li,4)
-    locate_card(li,6)
-    locate_card(li,9)
+    li = [5,4,3,2,1,0]
+    locate_card(li, 0)
 
+
+    li = [34, 23, 20, 18, 16, 6, 6, 6, 5, 4, 3, 2, 1]
+    locate_card(li, 23)
+    locate_card(li, 4)
+    locate_card(li, 6)
     newli = []
-    for i in range(1000000,0,-1):
+    locate_card(newli, 6)
+    for i in range(1000000, 0, -1):
         newli.append(i)
 
-    locate_card(newli,24876)
-    locate_card(newli,0)
-    locate_card(newli,8888)
-    locate_card(newli,1)
-    locate_card(newli,-1)
+    newli[999993] = 6
+    newli[999995] = 6
+    newli[999996] = 6
+    locate_card(newli, 6)
