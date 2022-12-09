@@ -20,8 +20,57 @@
 # Note: Your solution will have to be efficient as the running time of your algorithm will be put to a test.
 
 def pack_bagpack(scores, weights, capacity):
-    return currscore
+    combi = [None for i in range(capacity +1)]
+    dict = {}
+    for i in range(len(weights)):
+        if weights[i] in dict.keys():
+            if dict[weights[i]] < scores[i]:
+                dict[weights[i]] = scores[i]
+        else:
+            dict[weights[i]] = scores[i]
+
+    combi[0] = [[]]
+    weightset = set(weights)
+    for i in range(len(combi)):
+        if combi[i] is not None:
+            for j in weightset:
+                if j != i:
+                    for k in combi[i]:
+                        if j not in k:
+                            new = k + [j]
+                            if i+j < len(combi):
+                                if combi[i+j] is not None:
+                                    combi[i+j] = combi[i+j] + [new]
+                                else:
+                                    combi[i + j] = [new]
+
+    maxscore = 0
+    counter = capacity
+    while counter >= 0:
+        combination = combi[counter]
+        if combination is not None:
+            for i in combination:
+                currscore = 0
+                for j in i:
+                    currscore = currscore + dict[j]
+                    if maxscore < currscore:
+                        maxscore = currscore
+        counter = counter - 1
+
+    return maxscore
 
 if __name__ == '__main__':
     #print(pack_bagpack([20, 5, 10, 40, 15, 25], [1, 2, 3, 8, 7, 4], 10))
-    print(pack_bagpack([15, 10, 9, 5], [1, 5, 3, 4], 8))
+    #print(pack_bagpack([15, 10, 9, 5], [1, 5, 3, 4], 8))
+    #scores = [15, 10, 9, 5]
+    #weights = [1, 5, 3, 4]
+    #capacity = 8
+    #print(pack_bagpack(scores, weights, capacity))
+    #scores = [100, 5, 16, 18, 50]
+    #weights = [25, 1, 3, 2, 15]
+    #capacity = 14
+    #print(pack_bagpack(scores, weights, capacity))
+    scores =[15, 13, 6, 8, 8, 7, 11, 4, 17, 19, 15, 11, 20, 20, 5, 18, 8]
+    weights = [4, 1, 3, 5, 4, 2, 1, 5, 5, 2, 2, 1, 1, 4, 5, 1, 1]
+    capacity = 14
+    print(pack_bagpack(scores, weights, capacity))
