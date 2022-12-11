@@ -24,6 +24,16 @@ class singlell:
             inode.next = self.head
             self.head = inode
 
+    def insertattail(self,val):
+        inode = nc.node(val)
+        if self.isEmpty():
+            self.head = inode
+        else:
+            start = self.head
+            while start.next is not None:
+                start = start.next
+            start.next = inode
+
     # insert element at the given position
     def insertatpos(self, val, pos):
         inode = nc.node(val)
