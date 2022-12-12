@@ -10,9 +10,10 @@
 import SingleLinkedList as sl
 import node as nc
 
+
 # implementing floyd's Loop detection algorithm
-def detectloop(ll:sl.singlell):
-    assert(not ll.isEmpty())
+def detectloop(ll: sl.singlell):
+    assert (not ll.isEmpty())
     start = ll.head
     runner = ll.head
     while runner is not None and runner.next is not None:
@@ -30,6 +31,7 @@ def detectloop(ll:sl.singlell):
         runner = runner.next
 
     return start
+
 
 if __name__ == "__main__":
     ll1 = sl.singlell()
