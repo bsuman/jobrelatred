@@ -1,9 +1,9 @@
-# Palindrome: Implement a function to check if a linked list is a palindrome.
+# Fibonacci: Implement a function to check if a linked list is a Fibonacci.
 
 import SingleLinkedList as sl
 
 
-def checkpalindrome(l1: sl.singlell) -> bool:
+def checkFibonacci(l1: sl.singlell) -> bool:
     if l1.isEmpty():
         return False
     elif l1.head.data != 1 and l1.head.next is None:
@@ -30,16 +30,16 @@ if __name__ == "__main__":
     ll.insertattail(3)
     ll.insertattail(5)
     ll.displayallvalues()
-    if checkpalindrome(ll):
-        print("is palindrome!")
+    if checkFibonacci(ll):
+        print("is Fibonacci!")
     else:
-        print("is not a palindrome!")
+        print("is not a Fibonacci!")
 
     ll1 = sl.singlell()
     ll1.insertattail(1)
     ll1.insertattail(0)
-    if checkpalindrome(ll1):
-        print("is palindrome!")
+    if checkFibonacci(ll1):
+        print("is Fibonacci!")
     else:
-        print("is not a palindrome!")
+        print("is not a Fibonacci!")
 
