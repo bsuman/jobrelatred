@@ -7,7 +7,7 @@
 
 
 import SingleLinkedList as sll
-import node as nc
+from CrackingTheCodingInterview.Chap2 import node as nc
 
 
 # wrong solution as there is no access to the singly linked list

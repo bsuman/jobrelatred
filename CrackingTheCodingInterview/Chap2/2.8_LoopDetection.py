@@ -8,7 +8,7 @@
 # Output: C
 
 import SingleLinkedList as sl
-import node as nc
+from CrackingTheCodingInterview.Chap2 import node as nc
 
 
 # implementing floyd's Loop detection algorithm

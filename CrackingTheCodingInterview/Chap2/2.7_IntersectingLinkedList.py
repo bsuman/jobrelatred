@@ -13,7 +13,8 @@
 # If yes, then continue to get the intersecting node
 
 import SingleLinkedList as sll
-import node as nc
+from CrackingTheCodingInterview.Chap2 import node as nc
+
 
 def CheckifIntersecting(ll1: sll.singlell, ll2: sll.singlell):
     assert (not ll1.isEmpty() and not ll2.isEmpty())

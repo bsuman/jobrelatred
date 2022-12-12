@@ -9,3 +9,4 @@ class dnode:
         self.data = idata
         self.next = None
         self.prev = None
+

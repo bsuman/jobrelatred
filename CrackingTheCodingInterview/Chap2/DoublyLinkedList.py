@@ -6,7 +6,7 @@
 # removevalue: remove the first node with the given value
 # displayallvalues: displays all the values in the linked list
 
-import node
+from CrackingTheCodingInterview.Chap2 import node
 
 
 class doublyll:

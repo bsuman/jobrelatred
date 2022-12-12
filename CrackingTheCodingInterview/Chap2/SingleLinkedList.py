@@ -8,7 +8,8 @@
 # getposofval: returns the position of the first occurence of the given value
 # displayallvalues: displays all the values in the linked list
 
-import node as nc
+from CrackingTheCodingInterview.Chap2 import node as nc
+
 
 class singlell:
     def __init__(self):
