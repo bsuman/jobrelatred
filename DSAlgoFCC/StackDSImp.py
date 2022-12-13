@@ -81,7 +81,7 @@ class mystackll:
         return self.top is None
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     mstack = Mystack()
     mstack.push(10)
     mstack.push(20)

@@ -100,7 +100,7 @@ class doublyll:
         return self.head is None
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     dll = doublyll()
     print(dll.isEmpty())
     dll.insert(12)

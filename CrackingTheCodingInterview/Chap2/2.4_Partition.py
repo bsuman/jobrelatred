@@ -53,7 +53,7 @@ def partition(ll: sll.singlell, val: int):
         start = start.next
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ll = sll.singlell()
     # 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition= 5]
     ll.insert(1)

@@ -2,7 +2,8 @@
 
 import SingleLinkedList as sll
 
-def removeDuplicatesWithBuf(ll:sll.singlell):
+
+def removeDuplicatesWithBuf(ll: sll.singlell):
     if ll.isEmpty():
         print("List is empty, no duplicates")
         return
@@ -17,10 +18,9 @@ def removeDuplicatesWithBuf(ll:sll.singlell):
             start = start.next
 
 
-
 # FOLLOW UP
 # How would you solve this problem if a temporary buffer is not allowed?
-def removeduplicates(ll:sll.singlell):
+def removeduplicates(ll: sll.singlell):
     if ll.isEmpty():
         print("List is empty, no duplicates")
         return
@@ -35,7 +35,8 @@ def removeduplicates(ll:sll.singlell):
             nextStart = nextStart.next
         start = start.next
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     tmp = sll.singlell()
     tmp.insert(10)
     tmp.insert(20)
@@ -71,4 +72,3 @@ if __name__ == "__main__":
     removeDuplicatesWithBuf(tmp4)
     print("======== After Remove ============")
     tmp4.displayallvalues()
-

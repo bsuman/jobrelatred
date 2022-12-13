@@ -58,7 +58,7 @@ class minstack(stack):
             self.minSt.pop()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     nstack = minstack()
     nstack.push(30)
     print(nstack.minValue())

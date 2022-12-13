@@ -90,7 +90,7 @@ class SetOfStacks:
         if start is not None:
             return start.pop()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sos = SetOfStacks(5)
     for i in range(1, 12):
         sos.push(i)

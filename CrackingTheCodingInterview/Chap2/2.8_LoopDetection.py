@@ -33,7 +33,7 @@ def detectloop(ll: sl.singlell):
     return start
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ll1 = sl.singlell()
     for i in range(10):
         ll1.insertattail(i)

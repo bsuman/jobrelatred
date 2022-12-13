@@ -75,7 +75,7 @@ def fsumlist(l1: sl.singlell, l2: sl.singlell):
     return fl
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     num1 = sl.singlell()
     # (7-> 1 -> 6) + (5 -> 9 -> 2).That is, 617 + 295.
     num1.insert(6)

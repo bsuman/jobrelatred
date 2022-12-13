@@ -32,6 +32,7 @@ class node:
         self.data = idata
         self.next = None
 
+
 class myqueuell:
     def __init__(self):
         self.first = None
@@ -64,8 +65,7 @@ class myqueuell:
         return self.first is None and self.last is None
 
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     mq = myqueue()
     print(mq.isEmpty())
     mq.add(4)

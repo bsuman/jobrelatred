@@ -19,7 +19,7 @@ def getKthElementToLast(sll: sl.singlell, k: int):
         start = start.next
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     slinklist = sl.singlell()
     for i in range(11):
         slinklist.insert(i)

@@ -22,7 +22,7 @@ def checkFibonacci(l1: sl.singlell) -> bool:
         return True
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ll = sl.singlell()
     ll.insertattail(1)
     ll.insertattail(1)

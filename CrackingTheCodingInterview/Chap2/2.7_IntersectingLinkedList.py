@@ -56,7 +56,7 @@ def CheckifIntersecting(ll1: sll.singlell, ll2: sll.singlell):
         return start1
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ll1 = sll.singlell()
     for i in range(10):
         ll1.insertattail(i)

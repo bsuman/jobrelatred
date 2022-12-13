@@ -64,7 +64,7 @@ class MyQueue:
         self.front.peek()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     mq = MyQueue()
     for i in range(1,6):
         mq.add(i)

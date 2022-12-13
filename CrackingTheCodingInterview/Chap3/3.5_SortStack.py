@@ -67,7 +67,7 @@ class sortedstack(stack):
                 start = start.next
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     s = sortedstack()
     s.push(30)
     s.push(23)

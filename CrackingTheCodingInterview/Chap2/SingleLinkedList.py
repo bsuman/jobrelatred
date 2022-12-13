@@ -149,7 +149,7 @@ class singlell:
         return self.head is None
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sll = singlell()
     print(sll.isEmpty())
     sll.insert(10)

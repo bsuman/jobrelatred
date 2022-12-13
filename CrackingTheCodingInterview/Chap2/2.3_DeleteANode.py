@@ -30,7 +30,7 @@ def removegivennode(rnc: nc.node):
 
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ll = sll.singlell()
     ll.insert("f")
     ll.insert("e")
