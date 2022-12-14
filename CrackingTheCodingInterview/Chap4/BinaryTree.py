@@ -117,6 +117,45 @@ class tnode:
         else:
             return self.left.inorder_traversal() + [self.data] + self.right.inorder_traversal()
 
+    def inorder_traversal_norecursion(self):
+        if self.left is None and self.right is None:
+            return [self.data]
+        inorder = []
+        stack = []
+        current = self
+        while True:
+            while current is not None:
+                stack.insert(0, current)
+                current = current.left
+            if current is None and len(stack) == 0:
+                return inorder
+            elif current is None and len(stack) > 0:
+                node = stack.pop(0)
+                inorder.append(node.data)
+                current = node.right
+
+    # Morris Traversal Algorithm
+    def inorder_traversal_norecur_nostack(self):
+        current = self
+        inorder = []
+        while current is not None:
+            if current.left is None:
+                inorder.append(current.data)
+                current = current.right
+            else:
+                pre = current.left
+                while pre.right is not None and pre.right is not current:
+                    pre = pre.right
+
+                if pre.right is None:
+                    pre.right = current
+                    current = current.left
+                else:
+                    pre.right = None
+                    inorder.append(current.data)
+                    current = current.right
+        return inorder
+
     def preorder_traversal(self):
         if self.left is None and self.right is None:
             return [self.data]
@@ -137,8 +176,33 @@ class tnode:
         else:
             return self.left.postorder_traversal() + self.right.postorder_traversal() + [self.data]
 
+    # Print Postorder traversal from given Inorder and Preorder traversals
+    def postorderfrominput(self, inorder: list, preorder: list):
+        # first element in the preorder is always the root element
+        if len(inorder) == 1:
+            return [inorder[0]]
+        root = preorder[0]
+        root_index = -1
+        try:
+            root_index = inorder.index(root)
+        except ValueError:
+            return
+
+        return self.postorderfrominput(inorder[0:root_index], preorder[1:root_index + 1]) + self.postorderfrominput(inorder[root_index + 1:], preorder[root_index + 1:]) + [root]
+
     def levelorder_traversal(self):
-        pass
+        levelorder = [self.data]
+        queue = [self]
+        while len(queue):
+            current = queue.pop(0)
+            if current.left is not None:
+                levelorder.append(current.left.data)
+                queue.append(current.left)
+            if current.right is not None:
+                levelorder.append(current.right.data)
+                queue.append(current.right)
+
+        return levelorder
 
     # Finding the height of the tree
     def getheight(self):
@@ -176,7 +240,7 @@ class tnode:
 
 if __name__ == '__main__':
     root = tnode(0)
-    for i in range(1, 11):
+    for i in range(1, 15):
         root.insert(i)
 
     print(root.inorder_traversal())
@@ -185,3 +249,13 @@ if __name__ == '__main__':
     print(root.getheight())
     print(root.getlevel(7))
     print(root.gettotalnodes())
+    print(root.inorder_traversal_norecursion())
+    print("=========================================================")
+    print(root.inorder_traversal_norecur_nostack())
+    print("=========================================================")
+    print(root.levelorder_traversal())
+    inorder = [7, 3, 8, 1, 9, 4, 10, 0, 11, 5, 12, 2, 13, 6, 14]
+    preorder = [0, 1, 3, 7, 8, 4, 9, 10, 2, 5, 11, 12, 6, 13, 14]
+    # [7, 8, 3, 9, 10, 4, 1, 11, 12, 5, 13, 14, 6, 2, 0]
+    print("=========================================================")
+    print(root.postorderfrominput(inorder,preorder))
