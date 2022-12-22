@@ -44,6 +44,7 @@ def calculate(a, m):
 
     return combi
 
+
 def product_sum_old(a, m):
     result = calculate(a, m)
     product = 0
@@ -51,19 +52,31 @@ def product_sum_old(a, m):
         product = product + math.prod(l)
     return product
 
-def product_sum(a, m):
+
+def product_sum_i(a, m):
+    length = len(a)
     product = 0
-    limit = len(a) - (m - 1)
-    for i in range(limit):
-        l = [a[i]]
-        j = i + 1
-        while j < len(a):
-            l.append(a[j])
-            if len(l) == m:
-                product = product + math.prod(l)
-                l = [a[i]]
-            j = j + 1
+    startindex = [i+1 for i in range(length)]
+    for i in range(length):
+        processlist= [[a[i]]]
+        count = 0
+        while len(processlist) > 0:
+            process_item = processlist.pop()
+            while process_item:
+                start = startindex[i+count]
+                for j in range(start, length):
+                    newitem = process_item[:]
+                    newitem.append(a[j])
+                    if len(newitem) == m:
+                        product = product + math.prod(newitem)
+                    else:
+                        processlist.insert(0,newitem)
+                process_item = []
+            count = count + 1
     return product
 
+
 if __name__ == '__main__':
-    print(product_sum([2, 3, 4, 5], 3))
+    #print(product_sum_i([2, 3, 4, 5], 3))
+    #print(product_sum_i([1, 2, 3], 2))
+    print(product_sum_i([3,2,9,1,7,10,5,6,8,4], 4))  # 157773

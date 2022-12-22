@@ -21,10 +21,12 @@ class HashTable:
     def __init__(self, max_size=MAX_HASH_TABLE_SIZE):
         # 1. Create a list of size `max_size` with all values None
         self.data_list = [None] * max_size
+        self.num_key_val_pairs = 0
 
     def insert(self, key, value):
         index = get_index(self.data_list, key)
-        self.data_list[index] = (key,value)
+        self.data_list[index] = (key, value)
+        self.num_key_val_pairs += 1
 
     def find(self, key):
         """Find the value associated with a key"""
@@ -41,7 +43,7 @@ class HashTable:
         idx = get_index(self.data_list, key)
 
         # 2. Store the new key-value pair at the right index
-        self.data_list[idx] = (key,value)
+        self.data_list[idx] = (key, value)
 
     def list_all(self):
         """List all the keys"""
@@ -108,3 +110,5 @@ def get_valid_index(data_list, key):
 # List of size MAX_HASH_TABLE_SIZE with all values None
 
 
+# Hash Table Improvements
+# Track the size of the hash table i.e. number of key-value pairs so that len(table) has complexity O(1).(See function __init__ and insert)

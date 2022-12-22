@@ -13,27 +13,39 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def insert(self,ival):
+        if self.val == 0 and self.right is None and self.left is None:
+            self.val = ival
+            return
+        if self.val == ival:
+            return
+        else:
+            if self.val < ival:
+                start = self.right
+                while start is not None:
+                    if start.val < ival:
+
 
 class Solution:
-    def binaryTree(self, nums, low, high):
-        if high <= low:
-            return None
-        mid = (high + low) // 2
-        node = TreeNode(nums[mid])
-        return [node.val] + [self.binaryTree(nums,low,mid)] + [self.binaryTree(nums,mid+1,high)]
+
+    def balancedTree(self, node):
+        pass
 
     def sortedArrayToBST(self, nums: list[int]) -> [TreeNode]:
-        low = 0
-        high = len(nums)
-        node = self.binaryTree(nums, 0, high)
-        return node
+        node = TreeNode()
+        for i in nums:
+            node.insert(i)
+
+
+
+        return []
 
 
     def __init__(self):
         pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sol = Solution()
     nums = [-10, -3, 0, 5, 9]
     li = sol.sortedArrayToBST(nums) #[0,-3,9,-10,null,5]
