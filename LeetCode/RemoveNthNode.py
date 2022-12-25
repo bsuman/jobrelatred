@@ -30,18 +30,17 @@ def removeNthFromEnd(head, n):
 
     return head
 
+
 if __name__ == '__main__':
     li = [1, 2, 3, 4, 5]
     head = ListNode(li[0])
     start = head
-    for i in range(1,len(li)):
+    for i in range(1, len(li)):
         lnode = ListNode(li[i])
         start.next = lnode
         start = start.next
-    removeNthFromEnd(head,2)
+    removeNthFromEnd(head, 2)
     start = head
     while start is not None:
         print(start.val)
         start = start.next
-
-
