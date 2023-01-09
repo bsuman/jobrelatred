@@ -3,9 +3,9 @@
 # Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
 
 
-def intersect(nums1,nums2):
+def intersect(nums1, nums2):
     if len(nums1) > len(nums2):
-        nums1,nums2 = nums2,nums1
+        nums1, nums2 = nums2, nums1
 
     finallist = []
     for i in range(len(nums1)):
@@ -17,9 +17,8 @@ def intersect(nums1,nums2):
 
     return finallist
 
+
 if __name__ == '__main__':
-    print(intersect([1,2,2,1],[2,2]))
-    print(intersect([4,9,5],[9,4,9,8,4]))
-    print(intersect([3,1,2], [1,1]))
-
-
+    print(intersect([1, 2, 2, 1], [2, 2]))
+    print(intersect([4, 9, 5], [9, 4, 9, 8, 4]))
+    print(intersect([3, 1, 2], [1, 1]))
