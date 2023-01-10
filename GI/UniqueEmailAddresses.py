@@ -23,8 +23,13 @@
 # emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
 # Output: 2
 
+# optimized the code to use a set instead of a list
+# set is by nature having unique elements so the size of the set will be number of unique emails
+# if list is used, a check should be made while appending the email to the list. the check if the email to append already exists in the list,
+# makes a list lookup which increases the time complexity
+
 def numUniqueEmails(emails: list[str]) -> int:
-    valid_emails = []
+    valid_emails = set()
     for email in emails:
         e_parts = email.split('@')
         localname = e_parts[0]
@@ -32,14 +37,13 @@ def numUniqueEmails(emails: list[str]) -> int:
         if index > -1:
             localname = localname[:index]
         localname = localname.replace('.', '')
-        if localname + '@' + e_parts[1] not in valid_emails:
-            valid_emails.append(localname +'@' + e_parts[1])
+        valid_emails.add(localname + '@' + e_parts[1])
 
     return len(valid_emails)
 
 
 if __name__ == '__main__':
-    emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+    emails = ["test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"]
     print(numUniqueEmails(emails))
     emails = ["a@leetcode.com", "b@leetcode.com", "c@leetcode.com"]
     print(numUniqueEmails(emails))
