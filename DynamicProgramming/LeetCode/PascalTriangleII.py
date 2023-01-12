@@ -1,15 +1,15 @@
-# Pascal's Triangle
-# Given an integer numRows, return the first numRows of Pascal's triangle.
-# In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
-def generate(numRows) -> list[list[int]]:
+# Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal's triangle.
+# In Pascal's triangle, each number is the sum of the two numbers directly above it as shown
+
+def getRow(rowIndex) -> list[int]:
     dp = []
-    for i in range(1, numRows + 1):
-        if i == 1:
+    for i in range(0, rowIndex+1):
+        if i == 0:
             dp.append([1])
-        elif i == 2:
+        elif i == 1:
             dp.append([1, 1])
         else:
-            numlist = dp[i - 2]
+            numlist = dp[i - 1]
             tmp = [1]
             nln = len(numlist)
             for j in range(nln):
@@ -19,8 +19,8 @@ def generate(numRows) -> list[list[int]]:
                     num = numlist[j]
                 tmp.append(num)
             dp.append(tmp)
-    return dp[numRows]
+    return dp[rowIndex]
 
 
 if __name__ == '__main__':
-    print(generate(6))
+    print(getRow(3))
