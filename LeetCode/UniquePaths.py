@@ -24,5 +24,5 @@ def uniquePaths(m: int, n: int) -> int:
 
 
 if __name__ == '__main__':
-    print(uniquePaths(3,7))
-    print(uniquePaths(3, 2))
+    print(uniquePaths(3, 7))
+    print(uniquePaths(3, 3))
