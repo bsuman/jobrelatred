@@ -1,30 +1,33 @@
-# write a function connectedgraphcount that takes in the adjacency list of an undirected graph
-# The function should return the number of connected components within the graph
-
+# write a function largestgraphsize that takes in the adjacency list of an undirected graph.
+# The function should return the size of the largest connected graph within the list.
 import CheckPathExistsUndirectedGraph as helper
 
 
-def connectedgraphcount(graph) -> int:
+def largestgraphsize(graph) -> int:
     visited = set()
-    numcount = 0
+    max_size = 0
     for key in graph.keys():
         if key not in visited:
             queue = [key]
             visited.add(key)
+            curr_size = 0
             while len(queue) > 0:
                 node = queue.pop()
+                curr_size = curr_size + 1
                 neighbours = graph[node]
                 for neighbour in neighbours:
                     if neighbour not in visited:
                         visited.add(neighbour)
                         queue.append(neighbour)
-            numcount += 1
+            if max_size < curr_size:
+                max_size = curr_size
 
-    return numcount
+    return max_size
 
 
 if __name__ == '__main__':
     graph = helper.createundirectedgraph([[0, 8], [0, 1], [0, 5], [5, 8], [2, 3], [2, 4], [4, 3]])
-    print(connectedgraphcount(graph))
-    graph = helper.createundirectedgraph([[0, 8], [0, 1], [0, 5], [5, 8], [2, 3], [2, 4], [4, 3], [12, 13], [13, 14]])
-    print(connectedgraphcount(graph))
+    print(largestgraphsize(graph))
+    graph = helper.createundirectedgraph(
+        [[0, 8], [0, 1], [0, 5], [5, 8], [8, 9], [2, 3], [2, 4], [4, 3], [12, 13], [13, 14]])
+    print(largestgraphsize(graph))
