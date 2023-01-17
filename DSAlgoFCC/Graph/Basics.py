@@ -2,17 +2,7 @@
 # Access time O(1)
 # Depth First Search implemented using the stack
 # Breadth First Search implemented using the queue
-
-graph = {
-    'a': ['b', 'c'],
-    'b': ['d'],
-    'c': ['e'],
-    'd': [],
-    'e': [],
-}
-
-
-def depthfirstsearch(node):
+def depthfirstsearch(node, graph):
     stack = [node]
     while len(stack) > 0:
         key = stack.pop(0)
@@ -23,15 +13,15 @@ def depthfirstsearch(node):
                 stack.insert(0, i)
 
 
-def rec_depthfirstsearch(node):
+def rec_depthfirstsearch(node,graph):
     print('Node:', node)
     if node in graph.keys():
         val = graph[node]
         for i in val:
-            rec_depthfirstsearch(i)
+            rec_depthfirstsearch(i,graph)
 
 
-def breadthfirstsearch(node):
+def breadthfirstsearch(node,graph):
     queue = [node]
     while len(queue) > 0:
         key = queue.pop(0)
@@ -43,8 +33,15 @@ def breadthfirstsearch(node):
 
 
 if __name__ == '__main__':
-    depthfirstsearch('a')
+    graph = {
+        'a': ['b', 'c'],
+        'b': ['d'],
+        'c': ['e'],
+        'd': [],
+        'e': [],
+    }
+    depthfirstsearch('a',graph)
     print("================================")
-    breadthfirstsearch('a')
+    breadthfirstsearch('a',graph)
     print("================================")
-    rec_depthfirstsearch('a')
+    rec_depthfirstsearch('a',graph)
