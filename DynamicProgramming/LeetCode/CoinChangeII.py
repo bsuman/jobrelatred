@@ -12,7 +12,8 @@ def change(amount: int, coins: list[int]) -> int:
             dp[x] += dp[x - coin]
     return dp[amount]
 
+
 if __name__ == '__main__':
     coins = [1, 2, 5]
     amount = 5
-    print(change(amount,coins))
+    print(change(amount, coins))
