@@ -12,6 +12,7 @@ def calculate_distance(source, graph, distance, rec_stack, destination) -> int:
             curr_distance = distance[(source, destination)]
         elif destination in neighbours:
             distance[(source, destination)] = 1
+            distance[(destination, source)] = 1
             curr_distance = distance[(source, destination)]
         else:
             for neighbour in neighbours:
@@ -19,6 +20,7 @@ def calculate_distance(source, graph, distance, rec_stack, destination) -> int:
                     curr_distance = calculate_distance(neighbour, graph, distance, rec_stack, destination)
                     if curr_distance != 0:
                         distance[(neighbour, destination)] = curr_distance
+                        distance[(destination,neighbour)] = curr_distance
                         curr_distance = curr_distance + 1
                         break
     rec_stack.remove(source)
