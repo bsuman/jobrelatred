@@ -38,10 +38,11 @@ class strdict:
     def get_keys(self):
         return self.empty_dict.keys()
 
+
 if __name__ == '__main__':
-    test_1 = strdict('str1','val1')
+    test_1 = strdict('str1', 'val1')
     print(test_1.get_keys())
-    test_1.addValue(8,'tmp1')
+    test_1.addValue(8, 'tmp1')
     test_1.addValue('tmp1', 12.3)
     test_1.addValue(None, 'tmp1')
     test_1.addValue('tmp1', None)
