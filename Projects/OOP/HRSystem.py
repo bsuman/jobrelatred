@@ -1,7 +1,7 @@
 # Design HR system
 # implement payroll system for different employees
 # class provides a class method which takes a list of employees and displays their name and calculates their payroll
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
 class Employee:
