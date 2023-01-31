@@ -75,3 +75,9 @@ print(check_list_correct(3, []))  # expected [3] but result = [3]
 # 2. keyword arguments: matching keyword name to value ( order does not matter and keyword name should match one of the function arguments)
 # (to mark all the arguments after * as keyword)
 # 3. *args: argument is a pointer to a list all the arguments to the function ( variadic arguments)
+
+# generator functions
+# returns generator object with the output and the object content need to be accessed via for loop
+gen_tmp = (n*n for n in range(1,10))
+for i in gen_tmp:
+    print(i)
