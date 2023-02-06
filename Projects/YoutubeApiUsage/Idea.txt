@@ -1,0 +1,10 @@
+learning how to use youtube api
+goal:perform analysis on hour much time is required to finish a tutorial from the freecodecamp.org channel
+
+step 1: signup for the youtube api key to allow the developer to call the api
+step 2: fetch the freecodecamp channel information
+step 3: using the freecodecamp channel id, fetch all the playlists available for the channel
+step 4: for a pytorch playlist, get all the videos of the playlist
+       step 4.1: handle the paging of the content for huge playlists
+step 5: for each video, get the duration, parse the string, extract the total video duration
+step 6: sum all the video duration and convert it to user readable format
