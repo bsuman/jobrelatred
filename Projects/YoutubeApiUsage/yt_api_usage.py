@@ -100,5 +100,6 @@ t_hrs, t_mins = divmod(t_mins, 60)
 # display the total time required to finish the chosen playlist
 print(f"Total time required to finish the current playlist is {t_hrs}H:{t_mins}M:{t_secs}S")
 
-video_di.sort(key=lambda vid:vid['num_views'],reverse = True)
-print(f"Most viewed video {video_di[0]['link']} of the current playlist has the view count of {video_di[0]['num_views']}.")
+video_di.sort(key=lambda vid: vid['num_views'], reverse=True)
+print(
+    f"Most viewed video {video_di[0]['link']} of the current playlist has the view count of {video_di[0]['num_views']}.")
