@@ -30,7 +30,8 @@ min_pattern = re.compile(r'(\d+)M')
 sec_pattern = re.compile(r'(\d+)S')
 # store the duration of all the videos of a playlist
 total_duration = 0
-
+# popularity
+video_di = []
 # loop until no more videos are left in the playlist
 while True:
     # get the playlist videos for the playlist with playlistId.
@@ -53,7 +54,7 @@ while True:
     # convert the list of ids to string of ids
     vi_id_str = ",".join(video_id_list)
     # make the request
-    vi_request = service.videos().list(part="contentDetails", id=vi_id_str)
+    vi_request = service.videos().list(part="statistics,contentDetails", id=vi_id_str)
     vi_response = vi_request.execute()
 
     # for each video get the duration and extract the hours,mins, and seconds
@@ -75,6 +76,17 @@ while True:
         # add to the total duration
         total_duration += video_duration_secs
 
+        # extension: get the most popular video, by getting the video view count
+        num_views = video['statistics']['viewCount']
+        # create the link to the video
+        yt_link = f"https://youtu.be/{video['id']}"
+        video_di.append(
+            {
+                'num_views': int(num_views),
+                'link': yt_link
+            }
+        )
+
     # check if there is a next page, if the next page is None, then we are through the list.
     next_page_token = pl_response.get('nextPageToken')
     if next_page_token is None:
@@ -83,7 +95,10 @@ while True:
 # convert total seconds to hours:mins:secs format
 total_duration = int(total_duration)
 # get total minutes and seconds
-t_mins, t_secs = divmod(total_duration,60)
-t_hrs, t_mins = divmod(t_mins,60)
+t_mins, t_secs = divmod(total_duration, 60)
+t_hrs, t_mins = divmod(t_mins, 60)
 # display the total time required to finish the chosen playlist
-print(f"{t_hrs}:{t_mins}:{t_secs}")
+print(f"Total time required to finish the current playlist is {t_hrs}H:{t_mins}M:{t_secs}S")
+
+video_di.sort(key=lambda vid:vid['num_views'],reverse = True)
+print(f"Most viewed video {video_di[0]['link']} of the current playlist has the view count of {video_di[0]['num_views']}.")
