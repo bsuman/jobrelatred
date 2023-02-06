@@ -1,10 +1,9 @@
 Scraping a Job Portal
 Objective:
 
-There are various online job portals like LinkedIn,Xing etc.
+There are various online job portals like LinkedIn,Xing, or company specific job portals Siemens Job Search etc.
 You can use your web scraping expertise to find the most common criteria for a particular job or position.
 You can alternatively pick multiple job portals for this project, too. Though, it will increase the difficulty level of your project.
 
 In this project, you will build a tool that scrapes one or more job portals and checks the requirements of the desired job position.
-For example, you can look at all the ‘Graphic Designers’ jobs present in the job portal.
-You can work on the scraped data to analyze the most popular criteria for hiring a Python Developer professional.
+For example, you can look at all the ‘Python Developer’ jobs present in the Siemens job portal.
