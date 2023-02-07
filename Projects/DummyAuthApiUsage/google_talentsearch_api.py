@@ -24,21 +24,21 @@ if not credentials or not credentials.valid:
             print("Save The New Credentials..")
             pickle.dump(credentials,token)
 
-parent = 'projects/talentsearchapi'
-client_service = build('jobs', 'v3',credentials=credentials)
-request_metadata = {
-    'user_id': 'HashedUserId',
-    'session_id': 'HashedSessionId',
-    'domain': 'www.google.com'
-}
-job_query = {'query': "Python Developer"}
-company_name = "Google"
-if company_name is not None:
-    job_query.update({'company_names': [company_name]})
-request = {
-    'search_mode': 'JOB_SEARCH',
-    'request_metadata': request_metadata,
-    'job_query': job_query,
-}
-response = client_service.projects().jobs().search(parent=parent, body=request).execute()
-print(response["matchingJobs"])
+# parent = 'projects/talentsearchapi'
+# client_service = build('jobs', 'v3',credentials=credentials)
+# request_metadata = {
+#     'user_id': 'HashedUserId',
+#     'session_id': 'HashedSessionId',
+#     'domain': 'www.google.com'
+# }
+# job_query = {'query': "Python Developer"}
+# company_name = "Google"
+# if company_name is not None:
+#     job_query.update({'company_names': [company_name]})
+# request = {
+#     'search_mode': 'JOB_SEARCH',
+#     'request_metadata': request_metadata,
+#     'job_query': job_query,
+# }
+# response = client_service.projects().jobs().search(parent=parent, body=request).execute()
+# print(response["matchingJobs"])
