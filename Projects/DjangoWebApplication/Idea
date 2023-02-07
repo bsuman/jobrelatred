@@ -1,0 +1,77 @@
+The goal is to learn how to use Django Framework to build a web application that provides:
+1. user profile creation and deletion
+2. authentication, password management
+3. creating/editing/deleting blog posts
+4. admin functionalities for the web-application
+
+installed django using pip install command
+started a project using django-admin startproject <django_project_name>
+django created the project folder with the following structure :
+   - Manage.py allows us to run command line commands
+   - __init__.py file to inform the interpreter that current package is a python project
+   - settings.py file has settings information like secret_key, debug setting etc
+   - urls.py file to store redirect url
+   - wsgi.py file for communication between web application and web server
+
+To start run the server and pull default site
+    -execute the manage.py file using python manage.py runserver command
+        This command provides the default webpage from the django framework at the address
+        http://localhost:8000/ or  http://127.0.0.1:8000/
+    -To access the default admin page: enter admin/ in front of the http://localhost:8000/ to go to admin page
+        http://localhost:8000/admin/
+        The routing to the admin page is done via urls.py file using the admin.site.urls in the path instruction
+
+To stop running the server, ctrl+c on the command line
+
+It is generally a good practice to have separate apps run on the website, wherein each app has a different purpose.
+Example: blog app for managing blogs where as store app for managing the store of the website
+
+To create blog app for our project:
+    - run python manage.py startapp blog
+    - create the blog folder structure
+
+views.py file to creating the view of the app
+    - create view called home for handling all the httprequests http://127.0.0.1:8000/blog
+        - when the url path is an empty string then the home function returns as the http response a webpage with headline "Blog Home"
+    - create view called home for handling all the httprequests http://127.0.0.1:8000/blog/about
+        - when the url path is contains "about/" string then the about function returns as the http response a webpage with headline "Blog About"
+The responses to the requested urls is calculated by proper referencing in the blog\urls.py and django_project\urls.py file
+    - when the request is made, the django_project\urls.py file is checked for the paths.
+    - all paths containing the "blog" references are then forwarded to blog\urls.py
+        - during forwarding the string is chopped off until the matched and processed pattern in the request
+          i.e. the request "http://127.0.0.1:8000/blog/about/" is chopped off "http://127.0.0.1:8000/blog/" and only "about/" is forwarded
+    - in the blog\urls.py file, the check for the corresponding path is done and the function from views.py file is called.
+To make the home page the default/landing page of the http request http://127.0.0.1:8000, keep the home page as the empty url instead of "blog/"
+So change made to the django_project\urls.py:
+    -   change from path('blog/', include('blog.urls') to path('', include('blog.urls'))
+
+
+The http response for blog app can be build by using templates.
+The templates are placed in the "templates" folder in the application folder as django by default searches for the templates/<app_name> folder.
+For each of the routes, create an html page. In this example, it is home.html and about.html.
+
+The <application>/apps.py i.e. <blog/apps.file> file has the class name which is used in the <django_project>/setting.py file.
+The class name is added in the INSTALLED_APPS list in the string formed by '<application_name.apps.classname>' i.e.'blog.apps.BlogConfig'
+After the application name is added, the HTTPResponse in the <application>/views.py file, need to be changed.
+The changed returned value is to load and render the template instead of sending a direct HTTP response.
+The loading and rendering of the template is automatically handled by django, shortcuts module , render function.
+
+To access the variables passed in the render function to the template, create a list of values. example: list of dictionaries
+where in each dictionary has key:value pairs. This list is then used in another dictionary which is passed to the render function.
+The dictionary contains the list as the value.
+In the templates file, the list is looped over to fetch the values.
+
+Updated then the if/else block in the title section of the templates so that the pages have default title incase no title is provided as input.
+TEMPLATE INHERITANCE:
+    - to avoid duplication of the code between templates ( example the default page name ), the concept of template inheritance can be used.
+    - create a new base.html file and copy the common content between the templates
+    - the content marked as "{% block content%}{%end block%}" is overwritten by child templates
+    - in the child templates, indicate that it extends the base.html template by adding the instructions:
+        - {% extends "blog/base.html" %}
+        - the code to be overwritten is mentioned between the quotes: {% block content %} and {% endblock content%}
+
+Use bootstrap library to style the webpage.
+To add the bootstrap, use the starter template and add the required sections like <Required meta tags>, <Bootstrap CSS>, and in the body, add the js scripts.
+There are no packages needed to be installed as the library functions are provided via content delivery
+
+Addition of navigation bar and styling information.
