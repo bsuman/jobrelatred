@@ -299,4 +299,37 @@ USER PROFILE
             @receiver(post_save, sender=User)
         - to save the created profile for the user, the save_profile function is called
             - the save function is called on the user's profile
+        - to register the signal in the users app so that when the new user is registered, the signal is invoked
+            - to do that add to the users/app.py file UsersConfig class  :
+                def ready(self):
+                    import users.signals
+Update user profile
+    - create a model form to work with specific database model in the users/form.py
+        - create a class for updating the user information
+            - UserUpdateForm which inherits from the forms.ModelForm and provides additional field for the email
+            - as the user information to be updated via this form is only username and email, provide those fields to the Meta class
+            - Meta class also has the USER as the model
+        - create a class for updating the profile information i.e. the profile image
+            - ProfileUpdateForm which inherits from the forms.ModelForm and provides no additional field
+            - Meta Class has now Profile as the model and only the image in the fields list
+        - add the created forms to the profile view
+            - create instance of the UserUpdateForm and ProfileUpdateForm and pass them in then render function
+            - these forms would then used in the profile.html file
+            - while the forms are added in the profile.html, to work with image data, the form tag should also have the encoding information
+                - enctype="multipart/form-data"
+        - to autofill the fields from the current user
+            -add the request.user as the instance for user profile information and request.user.profile for the profile information
+            - autofill should be done only when the request is a POST request
+                -  check the request type
+                - if the request is a post request and the user data and user profile information is valid, then save the information
+                - after saving the information, send a success message
+                - redirect the user to the profile page. This is necessary to avoid a double "POST" request. Redirecting to the Profile page, makes a new get request
+        - to resize image automatically to fit the css file restrictions and not have huge files sent each time the profile is loaded
+            - use pillow module and overwrite the save function of the profile_form
+            - call the parent save method
+            - get the saved image and check the dimensions
+            - if the dimensions are bigger than allowed, then resize the image and save the image
+        - to display the profile picture in the home page, update the home.html file.
+            - include the image source and add the bootstrap class which will be make the image small and rounded for each user
+            - the image is accessed via {{post.author.profile.image.url}}
 
