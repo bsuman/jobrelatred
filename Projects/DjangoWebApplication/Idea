@@ -333,3 +333,62 @@ Update user profile
             - include the image source and add the bootstrap class which will be make the image small and rounded for each user
             - the image is accessed via {{post.author.profile.image.url}}
 
+CREATE,UPDATE,DELETE POSTS
+    - SEE ALL POSTS AS LIST SORTED IN DESCENDING CREATED ON ORDER
+        - in the blog app, the views.py, function based views which means the url
+          patterns are directed to the functions which then handle the logic for the views and render the html
+        - class based views have more built-in functionality
+            -different kinds of view: detailed view-shows content etc, list views, update and delete views
+            -django gives a lot of generic views
+        - in the view.py file of the blog app, add the class which is inheriting from the list view
+        - register the class view in the urls.py file which will use the class instead of the function
+        - to sort the list view in the descending order, added the attribute
+            ordering = ['-date_posted'] # default is ascending but '-' in front changes it to descending
+    - SEE INDIVIDUAL POST INFORMATION
+        - create a new class inheriting from the detailed view class
+        - set the model to post
+        - in the urls.py file, to create a variable which is uniquely identifying each post, use the pk (primary key) of int type in <>
+        - to use the built-in naming convention, the new html file where the post details are made visible, add the post_detail.html
+        - add for each post the content and use the default naming convention and access the post using object as keyword
+    - add the link to the post in the home.html file by using the post_detail url route and the id as the key
+    -CREATE NEW POSTS
+        - to create new post, add in the views.py file a new PostCreateView class which inherits from createview class
+        - the PostCreateView class has Post as the model
+        - in the PostCreateView form, the fields in the fields list are displayed
+        - the urls.py file should be updated to route the /page/new request to the PostCreateView class and load the post_form.html
+            - the html file is not having the view name as the createview expect the html to have a form.
+            - therefore the name of the html file should by default have the modelname_form.html naming convention
+        -overwrite the form_valid method to set the author of the post to the current user
+            - then call the parent valid function
+        -after the post is created successfully, the application needs to redirect the user to a page.
+        -this can be done using either redirect or reverse functions from django url
+            - redirect , redirects the user to a specific route
+            - reverse, returns the full url to the route as a string
+        -for the current use case, the reverse method is used.
+        -In the post model,add the get_absolute_url method to indicate to django the full url to a particular post which will be shown when the post is created
+            - reverse('post-detail', kwargs={'pk': self.pk})
+    -POST CREATION ONLY ALLOWED WHEN LOGGED IN
+        - to ensure that the user can create a new view only when the user has logged in, the use of decorators cannot be done for class based views.
+        - instead to make login required for creating the post, the use of mixins is done
+        - import the LoginRequiredMixin class and add the LoginRequiredMixin class as a parent class to the PostCreateView class
+    -UPDATE EXISTING POSTS
+        - add a new PostUpdateView inheriting from UpdateView and the LoginRequiredMixin class
+        - the rest of functionality remains the same as the create post class
+        - add url for the PostUpdateView
+        - the individual post id as gotten via the int:pk and the same form as the create view is used
+    -POST UPDATE ONLY ALLOWED WHEN AUTHOR IS SAME AS CURRENT USER
+        - to make this check, another inbuilt mixin can be used
+        - UserPassesTestMixin is inherited by the PostUpdateView class
+        - the UserPassesTestMixin provides the test_func method to perform the check
+        - in the test_func method, the current post is retrieved and the author is checked against current user.
+        - return True if the test passes otherwise false
+        - if the test fails, 403 Forbidden error shown
+    - DELETE POST FUNCTIONALITY
+        - to delete the post, the PostDeleteView is created in views.py by inheriting from DeleteView
+        - the delete post should be allowed only user has logged in and if the current post author is the logged in user
+            - to do that the UserPassesTestMixin and LoginRequiredMixin mixins are used
+        - add the route in the urls.py file for the delete functionality
+        - the html file follows the standard naming conventions and the deletion confirmation page is called post_confirm_delete.html
+        - post_confirm_delete.html asks the user a confirmation question with two buttons: one for deletion and another for cancel deletion
+        - add in the success_url = '/' in the PostDeleteView class which will be used to redirect user to home page after the post is deleted
+    - Add new button in the home page navigation bar and in the post details page
