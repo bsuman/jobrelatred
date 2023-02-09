@@ -246,5 +246,57 @@ AUTHENTICATION SYSTEM
                     - LOGIN_URL = 'login'
 
 
+USER PROFILE
+    - upload more content in user profile
+        - default user class of django does not provide a profile picture
+        - to make a custom class for user, new class is added to the users/model.py file
+        - the new class Profile is inheriting from the models class from django.db
+        - each user is allowed to have a single profile
+            - this is managed by creating one to one relation between profile and user class
+            - the relationship is done by using models.OneToOneField(User, on_delete=models.CASCADE) with "User" model as the input
+            - when the user is deleted from the database, the profile associated with the user should also be deleted
+        - each user shall have a profile picture. if the profile picture is not provided then the default profile picture is used
+            - this is done by making an image field. when the user uploads the profile, all the profile pictures are uploaded in the profile_pics directory
+            - models.ImageField(default='default.jpg',upload_to='profile_pics')
+            - to use the image field the pillow module shall be installed. Pillow is library which allows to use image type in python
+                - python -m pip install Pillow
+        - to apply the changes to the database, run the python manage.py makemigrations command
+        - to apply migrate the changes, run the python manage.py migrations command
+        - once the Profile class is created in the xxx_initial.py file, register the profile model to admin, so that all the user profiles will be seen in the admin page
+            - to register the model, add admin.site.register(Profile) in the users/admin.py file
+        - all the profiles pictures are uploaded in the profile_pics folder which is created when the first user adds the photo
+            - incase multiple users upload the image file with the same name, then django attaches a hash value to the picture to resolve name conflicts
 
+        - default location of the profiles_pics folder is the project root folder.
+        - overwrite the default location where the profile_pic folder is created and ensure that the implementation folders are not cluttered
+        - two new variables are introduced in the settings.py file
+            - Media files will be then stored in the path provided in the MEDIA_ROOT variable. The os module will create a path using the BASE_DIR variable,
+              which is defined in the setting.py file and a folder named media will be created in the project's base directory
+                -MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+                - so the profile_pic will be done BASE_DIR/media/profile_pic
+            - to access the image in the browser provide the url
+                -MEDIA_URL  = '/media/'
+    - display profile picture in the profile page
+        - update the profile.html file to add the image source by accessing user.profile.image.url
+        - add username and user email id
+        - add the url pattern to reroute while accessing the image url by adding in the <project>/urls.py file
+            -if settings.DEBUG:
+                    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+            - refer to the django documentation https://docs.djangoproject.com/en/2.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development
+        - to get the default picture when the user has not uploaded the default image
+            - add the default.jpg file in the /media/ path from where it is uploaded
+    -attaching a profile by default to user without having to create it via admin page.
+        - to do this, django signal is used.
+        - create signals.py file in the user app.
+        - import the post_save signal from the django.db.models.signals module.
+            - The post_save signal gets fired when a user is created and saved in the db
+        - import the User model from django.contrib.auth.models . The user will be the sender of the post_save signal.
+        - receiver is a function which gets the signal and performs a function
+            - receiver is created by using the django.dispatch import receiver module
+        - create_profile function takes the sender, the instance and created which is the boolean along with other keyword arguments
+        - this function is called whenever a user is created and creates a profile for the given user
+        - to invoke the function after receiving the signal, use the receiver as a decorator and indicate the signal and the sender of the signal to the decorator
+            @receiver(post_save, sender=User)
+        - to save the created profile for the user, the save_profile function is called
+            - the save function is called on the user's profile
 
