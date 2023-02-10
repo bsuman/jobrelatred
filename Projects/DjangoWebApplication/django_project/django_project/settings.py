@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'crispy_forms',
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,6 +116,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -123,3 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('GMAIL_USER_NAME')
+EMAIL_HOST_PASSWORD = os.environ.get('GMAIL_PASSWORD')
+

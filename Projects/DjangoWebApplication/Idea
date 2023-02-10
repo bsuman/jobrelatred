@@ -432,3 +432,31 @@ PAGINATION and FILTER TO SEARCH FOR POSTS
                 - "{% url 'user-post' post.author.username %}" in home.html file
                 - "{% url 'user-post' post.author.username %}" in user_posts.html file
                 - "{% url 'user-post' object.author.username %}" in post_detail.html file
+
+PASSWORD RESET
+    - for resetting the password, the django built in views are used ( like logout and login for the users)
+    - in the users/urls.py add the route to request for password change:
+            path('password-reset/', auth_view.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset')
+            - the built in passwordresetview is used and on getting the password-reset request, the password_reset.html file is fetched
+            - the html file is similar to log in page with the email id field and request password change button
+            - on click of the submit button the in-built django url is the reverse match for the password_reset_confirm and redirected to password_reset_email.html
+            - in the url path it also provides for uid with base 64 that identifies the current logged in user in the db
+              and checks if the request was made by the current logged in user for his own email id
+            - in the url path it also provides the token for the current user to add a layer of security
+    - to make sure that the current user is resetting the password for self,
+            - in the users/urls.py add the route to confirm the password change and fetch the uid and token sent to the redirected url
+                - path('password-reset-confirm/<uidb64>/<token>/', auth_view.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+            - create the password_reset_confirm.html file with a form to reset the password.
+    - in the users/urls.py add the route to confirm the password change request sent to the email:
+            path('password-reset/done', auth_view.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done')
+            -to setup the email server, add the following to the variables to the setting.py file
+                    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+                    EMAIL_HOST= 'smtp.gmail.com'
+                    EMAIL_PORT = 587
+                    EMAIL_USE_TLS = True
+                    EMAIL_HOST_USER = os.environ.get('GMAIL_USER_NAME')
+                    EMAIL_HOST_PASSWORD = os.environ.get('GMAIL_PASSWORD')
+            - the environment variable have the email id and the app password generated for the email.
+              the given email is used send the user an email with a link to reset the password.
+              when the user clicks on the link and enters the new password, the link contains the uidb64 value along with the token which is used to verify the user
+            -
