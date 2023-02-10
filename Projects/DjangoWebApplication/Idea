@@ -392,3 +392,43 @@ CREATE,UPDATE,DELETE POSTS
         - post_confirm_delete.html asks the user a confirmation question with two buttons: one for deletion and another for cancel deletion
         - add in the success_url = '/' in the PostDeleteView class which will be used to redirect user to home page after the post is deleted
     - Add new button in the home page navigation bar and in the post details page
+
+
+PAGINATION and FILTER TO SEARCH FOR POSTS
+    - pagination means to limit the content in a page and provide links at the bottom to see the next content
+    - django provides a paginator class which can be used to do this
+    - from django.core.paginator import Paginator
+    - the view for listing the posts - PostCreateView is created by inheriting from the createview class which provides pagination functionality
+    - add attribute paginate_by = <#posts_per_page> to the class
+    - LINKS IN HOME PAGE FOR NAVIGATION
+        - the links for the navigation are provided by making changes in the home.html file
+        - if the page is paginated, then
+            -check if it has previous pages.
+                - if it has previous page, then provide a link to first page and previous page
+                - the buttons are not bold or highlighted rather just an outline
+            - for each page, check if it is the current page number, then make the current page number button bold
+                - if the current page number falls in the range of current page number + 3 and current page number - 3
+                    - then provide the links to pages
+            - check if there are next pages available then
+                - provide link to the next page
+                - provide link to the last page
+    -DISPLAY POSTS FROM CHOSEN USER
+        - add a new class UserPostListView in the views.py file of the blog app
+        - The class lists all the posts written by particular user
+        - The user's username is retrieved from the Get request url
+        - The content of response to the Get request is filtered by the clicked user's username
+        - The method get_queryset is overloaded and the get_object_or_404 is imported from django.shortcuts
+            - The get_object_or_404 function gets the object from the database/model
+              if the object with the given criteria exists other wise gets the 404 object does not exists
+            - The get_object_or_404 function takes the db table name /model name i.e. user and the value from the input arguments of the self.
+                User, username=self.kwargs.get('username')
+        - if the user is found, the user is used as filter criteria on the posts, which gets all the posts from the user as the author
+        - the order_by functions returns the result in a descending order of the posts based on creation date
+        - for the route to work, add the class in the urls.py file, where in the request has the username in the route of the type string
+        - the new html file with the name user_posts is created
+            - added the headline indicating that the page displays only the select user's post
+            - and the number of posts written by him/her
+            - added the route to the user_posts html file when the link of the author is clicked
+                - "{% url 'user-post' post.author.username %}" in home.html file
+                - "{% url 'user-post' post.author.username %}" in user_posts.html file
+                - "{% url 'user-post' object.author.username %}" in post_detail.html file
