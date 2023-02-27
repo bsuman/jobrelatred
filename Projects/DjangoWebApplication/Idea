@@ -459,4 +459,9 @@ PASSWORD RESET
             - the environment variable have the email id and the app password generated for the email.
               the given email is used send the user an email with a link to reset the password.
               when the user clicks on the link and enters the new password, the link contains the uidb64 value along with the token which is used to verify the user
-            -
+
+
+
+DEPLOY Application to Linux server
+    - Deploy using Linode which is a linux server provider like AWS or Heroku
+    - 
