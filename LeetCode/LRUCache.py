@@ -8,6 +8,7 @@ class LRUCache:
         else:
             print("Error_size_value")
 
+
     def get(self, key: int) -> int:
         if key in self.c_dict.keys():
             pos = self.c_dict[key]

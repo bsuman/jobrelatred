@@ -7,6 +7,7 @@ def reverse_num(x: int) -> int:
     MAX = math.pow(2, 31) - 1
     MIN = math.pow(-2, 31)
     num = int(s_x)
+
     if num>MAX or num< MIN:
         return 0
     else:
