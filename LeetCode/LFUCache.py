@@ -22,6 +22,7 @@ class LFUCache:
             del self.v_dict[key]
             self.v_dict[key] = value
             self.c_dict[key] = self.c_dict[key] + 1
+
         except KeyError:
             if len(self.v_dict.items()) == self.capacity:
                 if self.capacity == 1:
