@@ -12,34 +12,27 @@ class MinHeap(Heap):
         self._heap = []
 
     def push(self, value):
-        """
-        push: elements are always added to the end of the heap, left to right
-        """
         self._heap.append(value)
         self._heapify_up(len(self._heap)-1)
 
     def pop(self):
-        """
-         pop function removes and returns the root element
-        """
         if len(self._heap) == 1:
             return self._heap.pop()
+        elif len(self._heap)> 1 :
+            item = self._heap[0]
+            self._heap[0] = self._heap.pop()
+            self._heapify_down()
+            return item
+        else:
+            return "Heap Empty!!"
 
-        item = self._heap[0]
-        self._heap[0] = self._heap.pop()
-        self._heapify_down()
-        return item
     def peek(self):
-        """
-        peek function returns the root element
-        """
         if len(self._heap) > 0:
             return self._heap[0]
+        else:
+            return "Heap Empty!!"
 
     def _heapify_up(self, index):
-        """
-           function to ensure that the heap invariant is remains after modification to the heap.
-        """
         while True:
             parent_index = (index - 1) // 2
             if parent_index >= 0 and self._heap[parent_index] > self._heap[index]:
@@ -49,9 +42,6 @@ class MinHeap(Heap):
                 break;
 
     def _heapify_down(self):
-        """
-           function to ensure that the heap invariant is remains after modification to the root.
-        """
         index = 0
         size = len(self._heap)
         while True:

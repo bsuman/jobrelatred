@@ -12,27 +12,25 @@ class MaxHeap(Heap):
         self._heap = []
 
     def push(self, value):
-        """
-        push: elements are always added to the end of the heap, left to right
-        """
         self._heap.append(value)
         self._heapify_up(len(self._heap)-1)
 
     def pop(self):
-        """
-         pop function removes and returns the root element
-        """
         if len(self._heap) == 1:
             return self._heap.pop()
-
-        item = self._heap[0]
-        self._heap[0] = self._heap.pop()
-        self._heapify_down()
-        return item
+        elif len(self._heap) >0:
+            item = self._heap[0]
+            self._heap[0] = self._heap.pop()
+            self._heapify_down()
+            return item
+        else:
+            return "Heap Empty!!"
 
     def peek(self):
         if len(self._heap) > 0:
             return self._heap[0]
+        else:
+            return "Heap Empty!!"
 
     def _heapify_up(self, index):
         while True:
