@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-15T18:02:58.144Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="MH0nEQFpE-PIcrN9pB_r" version="21.1.8" type="github">
+<mxfile modified="2023-04-15T18:04:49.819Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="-KXHrijDPU8Q5vJsZNHl" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -72,7 +72,8 @@
             <mxPoint x="162.42000000000004" y="290" as="sourcePoint" />
             <mxPoint x="270" y="330" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="162" y="331" />
+              <mxPoint x="140" y="290" />
+              <mxPoint x="140" y="331" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -94,10 +95,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="14" source="fJgO3W6yPN55QZMSzdzz-91" target="fJgO3W6yPN55QZMSzdzz-46">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="311" />
+              <mxPoint x="70" y="311" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-91" value="gRPC API &lt;br&gt;&amp;nbsp; configuration document" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud_services_configuration_file;pointerEvents=1;" vertex="1" parent="14">
-          <mxGeometry x="90.00268656716416" y="350" width="60.97014925373134" height="51" as="geometry" />
+          <mxGeometry x="50" y="327.4" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-106" value="Req_4: Upload Scan" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="14">
           <mxGeometry x="465.52" y="411" width="130" height="30" as="geometry" />
