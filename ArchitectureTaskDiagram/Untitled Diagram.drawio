@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-15T18:05:53.337Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="C9TTZdIC1mfgmf0ssDZb" version="21.1.8" type="github">
+<mxfile modified="2023-04-15T18:07:26.052Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="-ZPOU8ymf46CmTsvc87E" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -115,7 +115,7 @@
           <mxGeometry x="465.52" y="405.55333333333334" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-109" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/database.svg;" vertex="1" parent="14">
-          <mxGeometry x="720" y="391.0768888888889" width="111.63" height="82.6" as="geometry" />
+          <mxGeometry x="740" y="391.0768888888889" width="111.63" height="82.6" as="geometry" />
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="14" target="fJgO3W6yPN55QZMSzdzz-110">
           <mxGeometry relative="1" as="geometry">
@@ -126,8 +126,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-115" value="Save Images" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fJgO3W6yPN55QZMSzdzz-113">
+          <mxGeometry x="0.2596" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-110" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#60A337;gradientDirection=north;fillColor=#277116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_file_system;" vertex="1" parent="14">
-          <mxGeometry x="729.82" y="276.22333333333336" width="92" height="92" as="geometry" />
+          <mxGeometry x="759.63" y="276.22333333333336" width="92" height="92" as="geometry" />
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="14" source="fJgO3W6yPN55QZMSzdzz-46" target="fJgO3W6yPN55QZMSzdzz-109">
           <mxGeometry relative="1" as="geometry">
@@ -136,6 +141,11 @@
             <Array as="points">
               <mxPoint x="170" y="437.4866666666667" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-116" value="Store Metadata&amp;nbsp;&lt;br&gt;of images" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fJgO3W6yPN55QZMSzdzz-111">
+          <mxGeometry x="0.821" y="1" relative="1" as="geometry">
+            <mxPoint x="11" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2" value="Digital Patient Model Service API" style="fillColor=#4DA1F5;strokeColor=none;shadow=1;gradientColor=none;fontSize=14;align=left;spacingLeft=50;fontColor=#ffffff;html=1;" parent="1" vertex="1">
