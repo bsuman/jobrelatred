@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-15T17:42:41.055Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="k4rx-k7HzQWYDEeXojRb" version="21.1.8" type="github">
+<mxfile modified="2023-04-15T17:43:29.303Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="UbrAawykGDQo72z1Sojb" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -87,6 +87,18 @@
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-91" value="gRPC API &lt;br&gt;&amp;nbsp; configuration document" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud_services_configuration_file;pointerEvents=1;" vertex="1" parent="14">
           <mxGeometry x="81.82" y="350" width="47.5" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-95" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/UltimateGnome/128x128/mimetypes/text-x-c-plus--plus.png" vertex="1" parent="14">
+          <mxGeometry x="430" y="161" width="39" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-96" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/UltimateGnome/128x128/mimetypes/text-x-c-plus--plus.png" vertex="1" parent="14">
+          <mxGeometry x="420" y="61" width="39" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-97" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/Python_logo-128.png" vertex="1" parent="14">
+          <mxGeometry x="391" y="331" width="29" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-98" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/Python_logo-128.png" vertex="1" parent="14">
+          <mxGeometry x="391" y="231" width="29" height="29" as="geometry" />
         </mxCell>
         <mxCell id="2" value="Digital Patient Model Service API" style="fillColor=#4DA1F5;strokeColor=none;shadow=1;gradientColor=none;fontSize=14;align=left;spacingLeft=50;fontColor=#ffffff;html=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="80" width="300" height="40" as="geometry" />
