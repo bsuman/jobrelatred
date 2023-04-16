@@ -1,6 +1,6 @@
-<mxfile modified="2023-04-16T07:57:09.357Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="pd4cBmJeyLFhG0ggdS90" version="21.1.8" type="github">
+<mxfile modified="2023-04-16T07:58:04.853Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="n1YUEnIzWNHtGz6eEbu6" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
-    <mxGraphModel dx="1674" dy="1583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -272,6 +272,9 @@
         <mxCell id="fJgO3W6yPN55QZMSzdzz-117" value="API Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
           <mxGeometry x="10" y="40" width="240" height="530" as="geometry" />
         </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-118" value="Application Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
+          <mxGeometry x="337.81" y="7.83" width="342.19" height="312.17" as="geometry" />
+        </mxCell>
         <mxCell id="2" value="Digital Patient Model Service API" style="fillColor=#4DA1F5;strokeColor=none;shadow=1;gradientColor=none;fontSize=14;align=left;spacingLeft=50;fontColor=#ffffff;html=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="80" width="300" height="40" as="geometry" />
         </mxCell>
@@ -320,9 +323,6 @@
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-119" value="Persistent Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="585" y="960" width="490" height="314.01" as="geometry" />
-        </mxCell>
-        <mxCell id="fJgO3W6yPN55QZMSzdzz-118" value="Application&lt;br&gt;Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="560" y="-240" width="821.88" height="350" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
