@@ -1,11 +1,14 @@
-<mxfile modified="2023-04-16T08:12:56.961Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="_inPZdf3BqOa5VSajvyQ" version="21.1.8" type="github">
+<mxfile modified="2023-04-16T11:54:02.519Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="vcO9jPPQx9-GyBLprfuH" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
-    <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="14" value="&lt;b&gt;Google &lt;/b&gt;Cloud Platform" style="fillColor=#F6F6F6;strokeColor=none;shadow=0;gradientColor=none;fontSize=14;align=left;spacing=10;fontColor=#717171;9E9E9E;verticalAlign=top;spacingTop=-4;fontStyle=0;spacingLeft=40;html=1;" parent="1" vertex="1">
           <mxGeometry x="250" y="130" width="1170" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-117" value="API Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
+          <mxGeometry x="10" y="50" width="240" height="560" as="geometry" />
         </mxCell>
         <mxCell id="15" value="" style="shape=mxgraph.gcp2.google_cloud_platform;fillColor=#F6F6F6;strokeColor=none;shadow=0;gradientColor=none;" parent="14" vertex="1">
           <mxGeometry width="23" height="20" relative="1" as="geometry">
@@ -288,11 +291,8 @@
         <mxCell id="r7-mcl1aZyQmIgYv29nD-39" value="Monitoring" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#A153A0;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0,0.5,0],[0.125,0.25,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.875,0.25,0],[1,0.5,0],[0.875,0.75,0],[0.75,1,0],[0.5,1,0],[0.125,0.75,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=mxgraph.cisco_safe.design.blank_device;resIcon=mxgraph.cisco_safe.design.monitoring;" vertex="1" parent="14">
           <mxGeometry x="160" y="509" width="50" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="r7-mcl1aZyQmIgYv29nD-42" value="Lgooging&lt;br&gt;Reporting" style="fillColor=#28A8E0;verticalLabelPosition=bottom;sketch=0;html=1;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=ellipse;resIcon=mxgraph.cisco_safe.capability.logging_reporting;" vertex="1" parent="14">
+        <mxCell id="r7-mcl1aZyQmIgYv29nD-42" value="Logging&lt;br&gt;Reporting" style="fillColor=#28A8E0;verticalLabelPosition=bottom;sketch=0;html=1;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=ellipse;resIcon=mxgraph.cisco_safe.capability.logging_reporting;" vertex="1" parent="14">
           <mxGeometry x="90" y="510" width="46" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="fJgO3W6yPN55QZMSzdzz-117" value="API Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
-          <mxGeometry x="10" y="50" width="240" height="560" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-36" value="Business Logic Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" vertex="1" parent="14">
           <mxGeometry x="756.53" width="382.25" height="330" as="geometry" />
