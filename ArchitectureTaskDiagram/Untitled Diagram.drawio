@@ -1,6 +1,6 @@
-<mxfile modified="2023-04-16T08:05:21.210Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="pzGNgUdjFn5Mfl820ryZ" version="21.1.8" type="github">
+<mxfile modified="2023-04-16T08:07:50.803Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="zWt2PrV-pi5dvmMuAO6l" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
-    <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2843" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -73,13 +73,12 @@
         <mxCell id="fJgO3W6yPN55QZMSzdzz-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="14" source="fJgO3W6yPN55QZMSzdzz-91" target="fJgO3W6yPN55QZMSzdzz-46" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="94.31463546644864" y="390.46855328654055" />
-              <mxPoint x="94.31463546644864" y="390.46855328654055" />
+              <mxPoint x="100" y="391" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="fJgO3W6yPN55QZMSzdzz-91" value="gRPC API &lt;br&gt;&amp;nbsp; configuration document" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud_services_configuration_file;pointerEvents=1;" parent="14" vertex="1">
-          <mxGeometry x="79.99759676174904" y="389.9991779614578" width="53.89407740939922" height="50.2210357924811" as="geometry" />
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-91" value="gRPC API &lt;br&gt;&amp;nbsp; configuration &lt;br&gt;document" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud_services_configuration_file;pointerEvents=1;" parent="14" vertex="1">
+          <mxGeometry x="26.837596761749037" y="359.9991779614578" width="53.89407740939922" height="50.2210357924811" as="geometry" />
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-106" value="Req_4: Delete &lt;br&gt;Scan" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="14" vertex="1">
           <mxGeometry x="262.2626192751938" y="447.24468297725423" width="100" height="40" as="geometry" />
@@ -256,9 +255,6 @@
         <mxCell id="r7-mcl1aZyQmIgYv29nD-33" value="fetch images&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="14">
           <mxGeometry x="1067.8225350944876" y="335.99" as="geometry" />
         </mxCell>
-        <mxCell id="fJgO3W6yPN55QZMSzdzz-117" value="API Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
-          <mxGeometry x="10" y="40" width="240" height="530" as="geometry" />
-        </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-118" value="Application Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
           <mxGeometry x="337.81" y="10" width="342.19" height="310" as="geometry" />
         </mxCell>
@@ -285,6 +281,12 @@
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-36" value="Business Logic Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" vertex="1" parent="14">
           <mxGeometry x="760" width="382.25" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="r7-mcl1aZyQmIgYv29nD-39" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#A153A0;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0,0.5,0],[0.125,0.25,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.875,0.25,0],[1,0.5,0],[0.875,0.75,0],[0.75,1,0],[0.5,1,0],[0.125,0.75,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=mxgraph.cisco_safe.design.blank_device;resIcon=mxgraph.cisco_safe.design.monitoring;" vertex="1" parent="14">
+          <mxGeometry x="160" y="509" width="50" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="r7-mcl1aZyQmIgYv29nD-42" value="" style="fillColor=#28A8E0;verticalLabelPosition=bottom;sketch=0;html=1;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=ellipse;resIcon=mxgraph.cisco_safe.capability.logging_reporting;" vertex="1" parent="14">
+          <mxGeometry x="90" y="510" width="46" height="44" as="geometry" />
         </mxCell>
         <mxCell id="2" value="Digital Patient Model Service API" style="fillColor=#4DA1F5;strokeColor=none;shadow=1;gradientColor=none;fontSize=14;align=left;spacingLeft=50;fontColor=#ffffff;html=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="30" width="300" height="40" as="geometry" />
@@ -331,6 +333,9 @@
         </mxCell>
         <mxCell id="fJgO3W6yPN55QZMSzdzz-105" value="Req_3: &lt;br&gt;Get_StructureAtLocation()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="90" y="430" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-117" value="API Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="970" width="240" height="530" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
