@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-16T08:10:20.657Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="lKCxYaNzlbGEFc6HeU_H" version="21.1.8" type="github">
+<mxfile modified="2023-04-16T08:12:56.961Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="_inPZdf3BqOa5VSajvyQ" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -261,7 +261,7 @@
         <mxCell id="r7-mcl1aZyQmIgYv29nD-33" value="fetch images&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="14">
           <mxGeometry x="1067.8225350944876" y="335.99" as="geometry" />
         </mxCell>
-        <mxCell id="fJgO3W6yPN55QZMSzdzz-118" value="Application Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
+        <mxCell id="fJgO3W6yPN55QZMSzdzz-118" value="Service Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="14" vertex="1">
           <mxGeometry x="337.81" y="10" width="342.19" height="310" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-35" value="Data Management Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" vertex="1" parent="14">
