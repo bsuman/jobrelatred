@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-17T15:51:40.298Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="9kcnqPSsf9pRIwxJtMPX" version="21.1.8" type="github">
+<mxfile modified="2023-04-17T15:52:55.534Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="HC0Kr0hjOpBZCXNdnmeo" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
           <mxGeometry x="815" y="329.99" width="342.25" height="330" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-103" value="Data Management Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="r7-mcl1aZyQmIgYv29nD-49" vertex="1">
-          <mxGeometry x="285" y="335.99" width="235" height="284.01" as="geometry" />
+          <mxGeometry x="285" y="350" width="235" height="270" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-50" value="Service Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="r7-mcl1aZyQmIgYv29nD-49" vertex="1">
           <mxGeometry x="337.81" y="10" width="342.19" height="310" as="geometry" />
@@ -233,18 +233,18 @@
         <mxCell id="cXSStawGqt0-TIZkfB2u-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.009;entryY=0.158;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="r7-mcl1aZyQmIgYv29nD-49" source="cXSStawGqt0-TIZkfB2u-6" target="r7-mcl1aZyQmIgYv29nD-109">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="655" y="380" />
+              <mxPoint x="655" y="410" />
               <mxPoint x="655" y="382" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="cXSStawGqt0-TIZkfB2u-24" value="Trigger the asynchronous&lt;br&gt;&amp;nbsp;creation of the digital twin" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cXSStawGqt0-TIZkfB2u-19">
           <mxGeometry x="0.0162" y="-3" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="56" y="-35" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cXSStawGqt0-TIZkfB2u-6" value="" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;" vertex="1" parent="r7-mcl1aZyQmIgYv29nD-49">
-          <mxGeometry x="312.26" y="370" width="182.74" height="61.52" as="geometry" />
+          <mxGeometry x="312.26" y="383.77" width="182.74" height="61.52" as="geometry" />
         </mxCell>
         <mxCell id="cXSStawGqt0-TIZkfB2u-7" value="&lt;font color=&quot;#000000&quot;&gt;Microservice&lt;br&gt;&lt;/font&gt;Update_Digital_Twin&lt;br&gt;Cloud Run" style="editableCssRules=.*;html=1;fontColor=#999999;shape=image;verticalLabelPosition=middle;labelBackgroundColor=#ffffff;verticalAlign=middle;labelPosition=right;align=left;spacingLeft=20;part=1;points=[];imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyIgd2lkdGg9IjM2NS40NjQ5OTY3NzA0MjQ5MyIgaGVpZ2h0PSIzNzkuMjIyOTk0NDYzNTc3OTUiIHZpZXdCb3g9IjAgMCA5Ni42OTU5OTkxNDU1MDc4MSAxMDAuMzM1OTk4NTM1MTU2MjUiPiYjeGE7PHN0eWxlIHR5cGU9InRleHQvY3NzIj4mI3hhOwkuc3Qwe2ZpbGw6IzQyODVmNDt9JiN4YTsJLnN0MXtmaWxsOiNhZWNiZmE7fSYjeGE7PC9zdHlsZT4mI3hhOwk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjkuNzk0IDEwMC4zMzZMNDYuOTIgNTAuMTY4aDQ5Ljc3NnpNMCA5OS42NzFsMTIuOTc2LTQ5LjUwMkgyOS4yMkwxNi44OTcgOTIuMDU0eiIvPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yOS43OTQgMEw0Ni45MiA1MC4xNjhoNDkuNzc2ek0wIC42NjZsMTIuOTc2IDQ5LjUwMkgyOS4yMkwxNi44OTcgOC4yODN6Ii8+JiN4YTs8L3N2Zz4=;" vertex="1" parent="cXSStawGqt0-TIZkfB2u-6">
           <mxGeometry width="20" height="20" relative="1" as="geometry">
