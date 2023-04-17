@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-17T19:35:51.590Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="vWes9uBuUWscBcb8aOXe" version="21.1.8" type="github">
+<mxfile modified="2023-04-17T19:36:24.793Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="kwctki56QZ8hoGDArkZc" version="21.1.8" type="github">
   <diagram id="f106602c-feb2-e66a-4537-3a34d633f6aa" name="Page-1">
     <mxGraphModel dx="1674" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -11,7 +11,7 @@
           <mxGeometry x="235" y="130" width="1170" height="670" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-104" value="Persistent Layer for&lt;br&gt;Image Data" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="r7-mcl1aZyQmIgYv29nD-49" vertex="1">
-          <mxGeometry x="590" y="420" width="170" height="240" as="geometry" />
+          <mxGeometry x="590" y="410" width="170" height="250" as="geometry" />
         </mxCell>
         <mxCell id="r7-mcl1aZyQmIgYv29nD-109" value="Business Logic Layer" style="shape=rect;html=1;rounded=1;strokeWidth=2;verticalAlign=top;whiteSpace=wrap;align=center;fillColor=none;" parent="r7-mcl1aZyQmIgYv29nD-49" vertex="1">
           <mxGeometry x="815" y="329.99" width="342.25" height="330" as="geometry" />
