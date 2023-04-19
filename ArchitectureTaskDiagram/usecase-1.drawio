@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T08:06:30.453Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="FiAZL6i1abHIIkd721xR" version="21.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T08:13:08.432Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="mW6CSojFjYbv-5nR3PNz" version="21.1.8" type="github">
   <diagram name="Page-1" id="073-A5HoCjjV2lGI__am">
     <mxGraphModel dx="2314" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -43,20 +43,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Dz097fD4-B_uXPN6w9cI-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.743;entryY=0.071;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-4" target="Dz097fD4-B_uXPN6w9cI-23">
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-4" target="Dz097fD4-B_uXPN6w9cI-23">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="190" y="540" />
-              <mxPoint x="190" y="555" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Dz097fD4-B_uXPN6w9cI-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.571;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-4" target="Dz097fD4-B_uXPN6w9cI-23">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="160" y="560" />
-              <mxPoint x="160" y="640" />
-              <mxPoint x="410" y="640" />
+              <mxPoint x="195" y="560" />
+              <mxPoint x="195" y="585" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -84,11 +75,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Dz097fD4-B_uXPN6w9cI-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.1;entryY=0.843;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-7" target="Dz097fD4-B_uXPN6w9cI-23">
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.421;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-7" target="Dz097fD4-B_uXPN6w9cI-23">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="100" y="690" />
-              <mxPoint x="344" y="690" />
+              <mxPoint x="330" y="690" />
+              <mxPoint x="330" y="650" />
+              <mxPoint x="329" y="650" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -96,16 +89,16 @@
           <mxGeometry x="80" y="710" width="40" height="80" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-8" value="Update / upload patient scans&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="420" width="140" height="70" as="geometry" />
+          <mxGeometry x="240" y="360" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-9" value="Delete scans from patient file&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="390" width="150" height="70" as="geometry" />
+          <mxGeometry x="275" y="460" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-12" value="Fetch structural information for a patient scan&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="370" y="310" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-13" value="Fetch segmentation information for a patient scan" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="200" width="140" height="70" as="geometry" />
+          <mxGeometry x="380" y="190" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-16" value="Add/Register API service&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="350" y="880" width="140" height="70" as="geometry" />
@@ -117,7 +110,39 @@
           <mxGeometry x="350" y="680" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Dz097fD4-B_uXPN6w9cI-23" value="Authentication and Authorization&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="550" width="140" height="70" as="geometry" />
+          <mxGeometry x="270" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-28" value="Digital Model Data&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="260" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-30" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-13" target="Dz097fD4-B_uXPN6w9cI-28">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="540" as="sourcePoint" />
+            <mxPoint x="500" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-31" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-12" target="Dz097fD4-B_uXPN6w9cI-28">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="540" as="sourcePoint" />
+            <mxPoint x="500" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-34" value="trigger" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.013;entryY=0.614;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-8" target="Dz097fD4-B_uXPN6w9cI-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="540" as="sourcePoint" />
+            <mxPoint x="510" y="530" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-35" value="Digital Model Data&lt;br&gt;Generation / Update&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="430" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-36" value="trigger" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.013;entryY=0.614;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Dz097fD4-B_uXPN6w9cI-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="379" y="424" as="sourcePoint" />
+            <mxPoint x="562" y="483" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
