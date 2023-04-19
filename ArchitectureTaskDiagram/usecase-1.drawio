@@ -1,9 +1,18 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T07:51:27.771Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" version="21.1.8" etag="qBoc4LJ8A59UsXvvBxzZ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T07:56:57.346Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="AfBrTU2DEoXyZYdJenA8" version="21.1.8" type="github">
   <diagram name="Page-1" id="073-A5HoCjjV2lGI__am">
-    <mxGraphModel>
+    <mxGraphModel dx="2314" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-1" value="Doctor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-4" value="Lab Technician&amp;nbsp;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dz097fD4-B_uXPN6w9cI-7" value="System Administrator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="710" width="40" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
